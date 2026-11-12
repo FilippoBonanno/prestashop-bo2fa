@@ -1,0 +1,12 @@
+.env
+.env.*
+*.sql
+*.sql.gz
+*.zip
+*.log
+config.xml
+config_*.xml
+templates_c/
+cache/
+.DS_Store
+Thumbs.db

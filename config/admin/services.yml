@@ -1,0 +1,6 @@
+services:
+  bo2fa.admin_request_subscriber:
+    class: Bo2faAdminRequestSubscriber
+    public: false
+    tags:
+      - { name: kernel.event_subscriber }

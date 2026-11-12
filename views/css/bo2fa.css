@@ -1,0 +1,115 @@
+/* bo2fa: Verifica (1C), Attivazione (2A), Gestione (3A). Breakpoint unico 768 px. */
+.e2fa-verify-page, .e2fa-page {
+  --e2fa-ink: #363a41; --e2fa-muted: #5f6b73; --e2fa-line: #dbe2e6; --e2fa-field: #bbcdd2;
+  --e2fa-bg: #eff1f2; --e2fa-primary: #1b7f95; --e2fa-primary-dark: #125b6b; --e2fa-accent: #25b9d7;
+  --e2fa-danger: #a12a1e;
+  font-family: "Open Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  color: var(--e2fa-ink);
+}
+
+/* ---------- Pagina Verifica (standalone) ---------- */
+.e2fa-verify-page { margin: 0; background: #fff; }
+.e2fa-mobile-bar { display: none; }
+.e2fa-split { display: flex; min-height: 100vh; }
+.e2fa-guide { width: 40%; max-width: 520px; box-sizing: border-box; background: #363a41; color: #fff; padding: 64px 56px; display: flex; flex-direction: column; gap: 32px; }
+.e2fa-brand { font-size: 18px; font-weight: 700; letter-spacing: .04em; }
+.e2fa-brand span { font-weight: 400; color: #c9d1d6; }
+.e2fa-guide h2 { margin: 0; font-size: 26px; line-height: 1.3; }
+.e2fa-steps { margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 24px; }
+.e2fa-steps li { display: flex; gap: 16px; align-items: flex-start; font-size: 15px; line-height: 1.5; color: #e6eaed; }
+.e2fa-steps strong { color: #fff; }
+.e2fa-num { flex: none; width: 32px; height: 32px; border-radius: 50%; background: var(--e2fa-accent); color: #1d1f23; font-weight: 700; display: flex; align-items: center; justify-content: center; }
+.e2fa-guide-help { margin: auto 0 0; font-size: 13px; line-height: 1.5; color: #c9d1d6; }
+.e2fa-form-wrap { flex: 1; display: flex; align-items: center; justify-content: center; padding: 32px 20px; }
+.e2fa-form { width: 100%; max-width: 400px; display: flex; flex-direction: column; gap: 16px; }
+.e2fa-form h1 { margin: 0; font-size: 24px; font-weight: 700; }
+.e2fa-form label { font-size: 13px; font-weight: 600; }
+.e2fa-links { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
+
+/* ---------- Elementi comuni ---------- */
+.e2fa-muted { margin: 0; font-size: 14px; line-height: 1.5; color: var(--e2fa-muted); }
+.e2fa-input { width: 100%; height: 52px; box-sizing: border-box; border: 1px solid var(--e2fa-field); border-radius: 4px; padding: 0 14px; font-size: 22px; font-family: inherit; color: var(--e2fa-ink); background: #fff; }
+.e2fa-input-code { letter-spacing: .3em; }
+.e2fa-input-mono { font-family: ui-monospace, Menlo, Consolas, monospace; letter-spacing: .12em; font-size: 20px; }
+.e2fa-input:focus, .e2fa-btn:focus-visible, .e2fa-link:focus-visible { outline: 2px solid var(--e2fa-accent); outline-offset: 2px; }
+.e2fa-check { display: flex; gap: 10px; align-items: center; min-height: 44px; font-size: 14px; font-weight: 400 !important; margin: 0; }
+.e2fa-check input { width: 18px; height: 18px; margin: 0; accent-color: var(--e2fa-primary); }
+.e2fa-btn { display: inline-flex; align-items: center; justify-content: center; min-height: 44px; padding: 0 18px; box-sizing: border-box; border: 1px solid var(--e2fa-primary); border-radius: 4px; background: #fff; color: var(--e2fa-primary); font-size: 15px; font-weight: 600; font-family: inherit; text-decoration: none; cursor: pointer; }
+.e2fa-btn:hover { color: var(--e2fa-primary-dark); text-decoration: none; }
+.e2fa-btn-primary { background: var(--e2fa-primary); color: #fff; }
+.e2fa-btn-primary:hover { background: var(--e2fa-primary-dark); color: #fff; }
+.e2fa-btn[disabled] { background: var(--e2fa-field); border-color: var(--e2fa-field); color: var(--e2fa-ink); cursor: not-allowed; }
+.e2fa-btn-danger { border-color: #c0392b; color: var(--e2fa-danger); }
+.e2fa-btn-small { min-height: 36px; padding: 0 12px; font-size: 13px; }
+.e2fa-link { display: inline-flex; align-items: center; min-height: 44px; color: var(--e2fa-primary); font-size: 14px; }
+.e2fa-alert { border-radius: 4px; padding: 12px 14px; font-size: 14px; line-height: 1.5; }
+.e2fa-alert-error { background: #fdecea; color: #8a1c13; }
+.e2fa-alert-ok { background: #e7f6ec; color: #14532d; border: 1px solid #9bd3ae; }
+.e2fa-alert-warn { background: #fff4e5; color: #5c3100; border: 1px solid #f5c98a; }
+.e2fa-badge { display: inline-block; border-radius: 10px; padding: 3px 10px; font-size: 12px; font-weight: 600; }
+.e2fa-badge-on { background: #e7f6ec; color: #14532d; }
+.e2fa-badge-todo { background: #fff4e5; color: #7a4100; }
+.e2fa-badge-off { background: #eef1f3; color: #3d4750; }
+.e2fa-danger { color: var(--e2fa-danger); font-weight: 600; }
+.e2fa-only-mobile { display: none; }
+
+/* ---------- Pagine dentro il BO (Attivazione, Gestione) ---------- */
+.e2fa-page { max-width: 1100px; display: flex; flex-direction: column; gap: 18px; }
+.e2fa-title { margin: 0; font-size: 22px; font-weight: 700; }
+.e2fa-card { background: #fff; border: 1px solid var(--e2fa-line); border-radius: 6px; padding: 24px; display: flex; flex-direction: column; gap: 14px; }
+.e2fa-card h2 { margin: 0; font-size: 17px; font-weight: 700; }
+.e2fa-stepper { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 12px 20px; font-size: 13px; }
+.e2fa-stepper li { display: flex; gap: 8px; align-items: center; color: var(--e2fa-muted); }
+.e2fa-stepper .is-done, .e2fa-stepper .is-current { color: var(--e2fa-ink); font-weight: 600; }
+.e2fa-dot { width: 26px; height: 26px; box-sizing: border-box; border-radius: 50%; border: 2px solid var(--e2fa-field); display: inline-flex; align-items: center; justify-content: center; }
+.is-done .e2fa-dot { background: var(--e2fa-primary); border-color: var(--e2fa-primary); color: #fff; }
+.is-current .e2fa-dot { border-color: var(--e2fa-primary); color: var(--e2fa-primary); }
+.e2fa-link-row { display: flex; flex-wrap: wrap; gap: 28px; align-items: flex-start; }
+.e2fa-link-row > div { flex: 1; min-width: 260px; display: flex; flex-direction: column; gap: 14px; }
+.e2fa-qr { width: 200px; max-width: 100%; box-sizing: border-box; padding: 10px; border: 1px solid var(--e2fa-line); background: #fff; }
+.e2fa-qr svg { display: block; width: 100%; height: auto; }
+.e2fa-key-row { display: flex; gap: 8px; }
+.e2fa-key { flex: 1; min-width: 0; box-sizing: border-box; background: #f4f6f7; border: 1px solid var(--e2fa-line); border-radius: 4px; padding: 11px 14px; font-family: ui-monospace, Menlo, Consolas, monospace; font-size: 16px; letter-spacing: .12em; word-break: break-all; }
+.e2fa-actions { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.e2fa-codes { margin: 0; padding: 20px; list-style: none; background: #f4f6f7; border: 1px dashed var(--e2fa-field); border-radius: 4px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px 40px; font-family: ui-monospace, Menlo, Consolas, monospace; font-size: 17px; letter-spacing: .1em; }
+.e2fa-inline-form { display: inline-flex; gap: 8px; margin: 0; }
+.e2fa-profiles { flex-direction: row; flex-wrap: wrap; align-items: center; gap: 8px 24px; }
+.e2fa-table-wrap { background: #fff; border: 1px solid var(--e2fa-line); border-radius: 6px; overflow-x: auto; }
+.e2fa-table { width: 100%; border-collapse: collapse; }
+.e2fa-table th, .e2fa-table td { text-align: left; padding: 12px 14px; border-bottom: 1px solid #e6eaed; font-size: 13px; vertical-align: middle; }
+.e2fa-table th { font-size: 12px; font-weight: 700; color: var(--e2fa-muted); background: #f8fafb; }
+.e2fa-profile-status { display: inline-block; margin-right: 12px; padding: 4px 10px; border-radius: 12px; background: #eef1f3; color: #363a41; font-size: 12px; font-weight: 600; vertical-align: middle; }
+.e2fa-profile-status.is-on { background: #e6f6ec; color: #1e7e3e; }
+
+@media (max-width: 767px) {
+  .e2fa-mobile-bar { display: block; background: #363a41; color: #fff; padding: 16px 20px; }
+  .e2fa-split { flex-direction: column; min-height: 0; }
+  .e2fa-guide { order: 2; width: auto; max-width: none; padding: 20px; gap: 16px; background: #f4f6f7; color: var(--e2fa-ink); }
+  .e2fa-guide .e2fa-brand { display: none; }
+  .e2fa-guide h2 { font-size: 17px; }
+  .e2fa-steps { gap: 12px; }
+  .e2fa-steps li { color: var(--e2fa-ink); font-size: 14px; }
+  .e2fa-steps strong { color: var(--e2fa-ink); }
+  .e2fa-guide-help { color: var(--e2fa-muted); }
+  .e2fa-form-wrap { align-items: flex-start; padding: 24px 20px; }
+  .e2fa-input-code { text-align: center; }
+  .e2fa-form .e2fa-btn-primary { min-height: 52px; font-size: 16px; }
+  .e2fa-only-mobile { display: flex; }
+  .e2fa-only-desktop { display: none; }
+  .e2fa-card { padding: 16px; }
+  .e2fa-codes { gap: 10px 12px; padding: 14px; font-size: 14px; }
+  .e2fa-actions .e2fa-btn, .e2fa-actions a { flex: 1; }
+  .e2fa-table thead { display: none; }
+  .e2fa-table, .e2fa-table tbody, .e2fa-table tr, .e2fa-table td { display: block; width: 100%; box-sizing: border-box; }
+  .e2fa-table tr { border-bottom: 8px solid var(--e2fa-bg); padding: 6px 0; }
+  .e2fa-table td { border: 0; padding: 6px 14px; display: flex; justify-content: space-between; gap: 12px; align-items: center; }
+  .e2fa-table td::before { content: attr(data-label); font-weight: 600; color: var(--e2fa-muted); }
+  .e2fa-btn-small { min-height: 44px; }
+}
+
+/* Il CSS è caricato in tutto il BO (riga nel profilo): la stampa va ristretta alla pagina dei codici di backup. */
+@media print {
+  body:has(.e2fa-print-area) * { visibility: hidden; }
+  body:has(.e2fa-print-area) .e2fa-print-area, body:has(.e2fa-print-area) .e2fa-print-area * { visibility: visible; }
+  .e2fa-print-area { position: absolute; left: 0; top: 0; }
+}
