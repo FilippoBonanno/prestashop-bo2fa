@@ -8,6 +8,10 @@ Modulo sviluppato da **Filippo Bonanno**. Un solo codice per PrestaShop 1.7.8, 8
 - Il controllo vale su ogni richiesta del back office: pagine legacy (hook) e pagine Symfony (event subscriber su `kernel.request`).
 - Tentativi limitati, token CSRF per sessione, log nel registro di PrestaShop. Test dei vettori RFC in `tests/selfcheck.php`.
 
+![Configurazione di bo2fa nel back office di PrestaShop 9](docs/configurazione.jpg)
+
+<sub>Back office di un PrestaShop 9.1 di prova.</sub>
+
 ---
 
 ## Guida d'uso
